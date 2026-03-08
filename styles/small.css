@@ -1,0 +1,155 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #222;
+    padding: 15px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .logo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Navigation (hamburger for mobile) */
+#hamburger {
+    display: block;
+    margin: 10px auto;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #d96b5c;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #c05345;
+}
+
+/* Main content */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Filter buttons */
+.course-filter button {
+    background-color: #e08b70;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.course-filter button:hover {
+    background-color: #d96b5c;
+    color: #fff;
+}
+
+/* Course cards */
+#courseCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.course-card {
+    background-color: #f3ebd3;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+/* Completed courses style */
+.course-card.completed {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+}
+
+.course-card.completed::before {
+    content: "✔ ";
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #9bbf9e;
+    color: #000;
+    padding: 15px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #222;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

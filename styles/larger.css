@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 900px;
+    }
+
+    nav {
+        display: block !important;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    /* Course cards grid */
+    #courseCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Course filter buttons larger */
+    .course-filter button {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    /* Footer horizontal layout */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
