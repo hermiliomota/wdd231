@@ -1,7 +1,7 @@
 const courses = [
     { name: "WDD131 - HTML & CSS", type: "WDD", credits: 3, completed: true },
     { name: "CSE132 - Programming Fundamentals", type: "CSE", credits: 3, completed: false },
-    // add more courses
+    
 ];
 
 function displayCourses(filter = "all") {
