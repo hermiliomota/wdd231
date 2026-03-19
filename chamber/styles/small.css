@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    background: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+}
+
+nav a {
+    color: white;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+nav.open {
+    display: flex;
+}
+
+.view-buttons {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.view-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#members.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+#members.list section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+section {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Badges */
+.badge {
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.badge.gold { background-color: #FFD700; color: #333; }
+.badge.silver { background-color: #C0C0C0; color: #333; }
+.badge.member { background-color: #007BFF; color: white; }
+
+/* Hover animation */
+#members.grid section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

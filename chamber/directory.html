@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lisbon Chamber of Commerce Directory</title>
+    <meta name="description" content="Business directory of the Lisbon Chamber of Commerce.">
+    <meta name="author" content="Hermilio S. Mota">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Lisbon Chamber Directory">
+    <meta property="og:description" content="Explore local businesses and members.">
+    <meta property="og:image" content="images/social-preview.webp">
+    <meta property="og:url" content="http://localhost:5500/chamber/directory.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Lisbon Chamber of Commerce</h1>
+    <button id="menuBtn">☰</button>
+    <nav id="navMenu">
+        <a href="#">Home</a>
+        <a href="directory.html" class="active">Directory</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Member Directory</h2>
+
+    <div class="view-buttons">
+        <button id="gridView">Grid</button>
+        <button id="listView">List</button>
+    </div>
+
+    <section id="members" class="grid"></section>
+</main>
+
+<footer>
+    <p>Lisbon Chamber of Commerce</p>
+    <p>Email: info@lisbonchamber.pt | Phone: +351 000 000 000</p>
+    <p>© <span id="year"></span> Hermilio S. Mota | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script src="scripts/directory.js"></script>
+</body>
+</html>
