@@ -99,12 +99,13 @@ select {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
-  input, textarea, select, button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; 
-}
+[type="submit"],
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 button::-moz-focus-inner,
