@@ -1,11 +1,12 @@
 const url = "data/members.json";
 const container = document.querySelector("#members");
 
+// Pegar membros Gold ou Silver e escolher aleatoriamente 2-3
 async function getSpotlights() {
     const response = await fetch(url);
     const data = await response.json();
 
-    const filtered = data.filter(m => m.membership >= 2); 
+    const filtered = data.filter(m => m.membership >= 2); // Gold (3) e Silver (2)
     const shuffled = filtered.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
@@ -36,10 +37,11 @@ function displayMembers(members) {
     });
 }
 
-
+// Footer automatic dates
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
+// Nav toggle mobile
 const menuBtn = document.querySelector("#menuBtn");
 const navMenu = document.querySelector("#navMenu");
 menuBtn.addEventListener("click", () => navMenu.classList.toggle("open"));
