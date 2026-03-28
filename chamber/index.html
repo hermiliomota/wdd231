@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lisbon Chamber of Commerce Home</title>
+    <meta name="description" content="Welcome to the Lisbon Chamber of Commerce. Discover members, local events, and opportunities to join.">
+    <meta name="author" content="Hermilio S. Mota">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+
+<header>
+    <h1>Lisbon Chamber of Commerce</h1>
+    <button id="menuBtn">☰</button>
+    <nav id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <img src="images/hero-banner.png" alt="Lisbon Chamber of Commerce" style="width:100%; max-height:400px; object-fit:cover;">
+        <div class="hero-content">
+            <h2>Connecting Lisbon's Businesses</h2>
+            <p>Discover, network, and grow with our Chamber members.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Current Events</h2>
+        <ul>
+            <li>Lisbon Business Expo – April 15, 2026</li>
+            <li>Networking Evening at Central Hall – April 22, 2026</li>
+            <li>Chamber Annual Meeting – May 10, 2026</li>
+        </ul>
+    </section>
+
+    <section id="weather">
+        <h2>Lisbon Weather</h2>
+        <div id="weatherData">
+            <p>Loading weather...</p>
+        </div>
+    </section>
+
+    <section id="spotlights">
+        <h2>Member Spotlights</h2>
+        <div id="membersSpotlight" class="grid"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Lisbon Chamber of Commerce</p>
+    <p>Email: info@lisbonchamber.pt | Phone: +351 000 000 000</p>
+    <p>© <span id="year"></span> Hermilio S. Mota | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+
+<script>
+
+const apiKey = 'aaab6577dd4de87db433ef686ea3f71f';
+const weatherContainer = document.getElementById('weatherData');
+
+async function fetchWeather() {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Lisbon,PT&units=metric&cnt=24&appid=${apiKey}`);
+    const data = await response.json();
+
+    const current = data.list[0];
+    const forecast = data.list.filter((_, i) => i % 8 === 0).slice(0, 3);
+
+    let html = `
+        <p>Current: ${current.main.temp}°C, ${current.weather[0].description}</p>
+        <h3>3-Day Forecast:</h3>
+        <ul>
+    `;
+
+    forecast.forEach(day => {
+        const date = new Date(day.dt_txt).toLocaleDateString();
+        html += `<li>${date}: ${day.main.temp}°C, ${day.weather[0].description}</li>`;
+    });
+
+    html += '</ul>';
+    weatherContainer.innerHTML = html;
+}
+fetchWeather();
+
+const membersSpotlightContainer = document.getElementById('membersSpotlight');
+
+async function getSpotlights() {
+    const response = await fetch('data/members.json');
+    const members = await response.json();
+
+    const premiumMembers = members.filter(m => m.membership >= 2);
+
+    const shuffled = premiumMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    membersSpotlightContainer.innerHTML = '';
+    shuffled.forEach(member => {
+        const card = document.createElement('section');
+        card.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name}">
+            <h3>${member.name} <span class="badge ${member.membership === 3 ? 'gold' : 'silver'}">${member.membership === 3 ? 'Gold' : 'Silver'}</span></h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p>${member.description}</p>
+        `;
+        membersSpotlightContainer.appendChild(card);
+    });
+}
+
+getSpotlights();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>

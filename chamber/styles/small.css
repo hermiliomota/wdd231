@@ -11,18 +11,22 @@ header, footer {
 }
 
 nav {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
 }
 
 nav a {
     color: white;
-    padding: .5rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
+    display: inline-block; 
 }
 
+
 nav.open {
-    display: flex;
+    flex-direction: column;  
 }
 
 .view-buttons {
@@ -59,9 +63,11 @@ section {
 
 section img {
     width: 100%;
-    max-height: 150px;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 /* Badges */
@@ -77,8 +83,11 @@ section img {
 .badge.silver { background-color: #C0C0C0; color: #333; }
 .badge.member { background-color: #007BFF; color: white; }
 
-/* Hover animation */
 #members.grid section:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#members.grid section img {
+    max-height: 120px;
 }

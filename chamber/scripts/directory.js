@@ -1,14 +1,12 @@
 const url = "data/members.json";
 const container = document.querySelector("#members");
 
-// Fetch e exibe membros
 async function getMembers() {
     const response = await fetch(url);
     const data = await response.json();
     displayMembers(data);
 }
 
-// Retorna badge de membership
 function getBadge(level) {
     switch(level) {
         case 3: return `<span class="badge gold">Gold</span>`;
@@ -17,7 +15,6 @@ function getBadge(level) {
     }
 }
 
-// Monta os cards/lista
 const displayMembers = (members) => {
     container.innerHTML = "";
 
@@ -37,7 +34,6 @@ const displayMembers = (members) => {
     });
 };
 
-// Toggle Grid/List
 document.querySelector("#gridView").addEventListener("click", () => {
     container.classList.add("grid");
     container.classList.remove("list");
@@ -48,11 +44,9 @@ document.querySelector("#listView").addEventListener("click", () => {
     container.classList.remove("grid");
 });
 
-// Footer dates automáticas
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-// Toggle mobile nav
 const menuBtn = document.querySelector("#menuBtn");
 const navMenu = document.querySelector("#navMenu");
 menuBtn.addEventListener("click", () => {
