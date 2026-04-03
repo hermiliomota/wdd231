@@ -39,7 +39,6 @@ nav.open {
     width: 50%;
     height: 60vh;
     min-height: 320px;     
-    background-image: url('hero-banner.png');
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
