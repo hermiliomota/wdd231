@@ -24,24 +24,70 @@ nav a {
     display: inline-block; 
 }
 
+nav a.active {
+    border: 1px solid white;
+    border-radius: 4px;
+}
 
 nav.open {
     flex-direction: column;  
 }
 
-.view-buttons {
-    text-align: center;
-    margin: 1rem 0;
+/* ===== Hero ===== */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;          /* altura responsiva */
+    min-height: 320px;     
+    background-image: url('hero.jpg'); /* substitua pelo seu arquivo */
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    color: black;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.view-buttons button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+#hero .hero-content {
+    text-align: center;
+    max-width: 90%;
+    background: rgba(255,255,255,0.7); /* leve destaque do texto */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* ===== Members Section ===== */
+#members {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 #members.grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
 
@@ -55,22 +101,27 @@ nav.open {
 section {
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 1px;
     background-color: #f9f9f9;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 section img {
     width: 100%;
-    max-width: 200px;
+    max-width: 2000px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
     margin: 0 auto;
 }
 
-/* Badges */
+/* ===== Badges ===== */
 .badge {
     font-weight: bold;
     padding: 0.2rem 0.5rem;
@@ -83,53 +134,14 @@ section img {
 .badge.silver { background-color: #C0C0C0; color: #333; }
 .badge.member { background-color: #007BFF; color: white; }
 
-#members.grid section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-#members.grid section img {
-    max-height: 120px;
-}
-
-#hero {
-    position: relative;
+/* ===== View Buttons ===== */
+.view-buttons {
     text-align: center;
-    color: rgb(0,0,0);
-    width: 100%;         
-    height: 450px;      
-    margin-bottom: 2rem;
-    overflow: hidden;     
-    background-color: rgb(0, 51, 102);
+    margin: 1rem 0;
 }
 
-#hero img {
-    width: 100%;          
-    height: 100%;         
-    object-fit: cover;   
-    display: block;
-}
-
-#hero .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-}
-
-#hero h2 {
-    font-size: 2.5rem;    
-    margin-bottom: 0.5rem;
-}
-
-#hero p {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;  
-    font-size: 1rem;
+.view-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }

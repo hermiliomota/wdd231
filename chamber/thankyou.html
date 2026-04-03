@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+
+<link rel="stylesheet" href="styles/chamber.css">
+
+<style>
+.summary {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.summary p {
+  padding: .5rem 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Chamber of Commerce</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="join.html">Join</a>
+</nav>
+
+<main>
+<h2>Thank You for Applying!</h2>
+
+<div class="summary" id="results"></div>
+
+</main>
+
+<footer>
+<p>&copy; Chamber of Commerce</p>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("results").innerHTML = `
+<p><strong>First Name:</strong> ${params.get("fname")}</p>
+<p><strong>Last Name:</strong> ${params.get("lname")}</p>
+<p><strong>Email:</strong> ${params.get("email")}</p>
+<p><strong>Mobile:</strong> ${params.get("phone")}</p>
+<p><strong>Business:</strong> ${params.get("organization")}</p>
+<p><strong>Submitted:</strong> ${params.get("timestamp")}</p>
+`;
+</script>
+
+</body>
+</html>
