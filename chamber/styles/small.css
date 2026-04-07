@@ -35,7 +35,7 @@ nav.open {
 
 /* ===== Hero ===== */
 #hero {
-    position: center;
+    position: relative;
     width: 50%;
     height: 50vh;
     min-height: 100px;     
