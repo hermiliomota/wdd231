@@ -1,0 +1,16 @@
+/* Medium screens: two cards per row */
+.grid-container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+    "item5 item6"
+    "item7 item8";
+}
+
+/* Large screens: 4 cards per row */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
