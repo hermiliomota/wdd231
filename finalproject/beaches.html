@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Browse beaches">
+  <meta name="author" content="Hermilio S. Mota">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beach Finder | Beaches</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>🌊 Beach Finder</h1>
+  <nav>
+    <button id="menuBtn">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="beaches.html">Beaches</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>All Beaches</h2>
+
+  <!-- 🔍 Search -->
+  <input type="text" id="searchInput" placeholder="Search beaches...">
+
+  <!-- 🎯 Filters -->
+  <select id="countryFilter">
+    <option value="all">All Countries</option>
+  </select>
+  
+  <select id="typeFilter">
+    <option value="all">All Types</option>
+  </select>
+
+  <div class="grid" id="beachContainer"></div>
+
+
+<dialog id="modal"></dialog>
+</main>
+<footer>
+    <p>Email: beachfindereu@eu.com | Phone: +351 000 000 000</p>
+    <p>© <span id="year"></span> Hermilio S. Mota | WDD 231 | &copy; 2026 Beach Finder</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    
+</footer>
+<script type="module" src="scripts/beaches.js"></script>
+</body>
+</html>

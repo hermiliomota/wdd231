@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact us">
+  <meta name="author" content="Hermilio S. Mota">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>🌊 Beach Finder</h1>
+  <nav>
+    <button id="menuBtn">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="beaches.html">Beaches</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <form action="form-action.html" method="get">
+
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Name" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="Email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Message" rows="5"></textarea>
+
+    <button type="submit">Send</button>
+
+  </form>
+</main>
+
+<footer>
+    <p>Email: beachfindereu@eu.com | Phone: +351 000 000 000</p>
+    <p>© <span id="year"></span> Hermilio S. Mota | WDD 231 | &copy; 2026 Beach Finder</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>

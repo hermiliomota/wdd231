@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Praia da Marinha",
+    "country": "Portugal",
+    "location": "Algarve",
+    "type": "Rocky cliffs",
+    "rating": 4.9,
+    "image": "images/marinha.jpg",
+    "description": "One of the most iconic beaches in Portugal, known for its golden cliffs and crystal-clear waters."
+  },
+  {
+    "id": 2,
+    "name": "Praia da Falésia",
+    "country": "Portugal",
+    "location": "Algarve",
+    "type": "Sandy",
+    "rating": 4.8,
+    "image": "images/falesia.jpg",
+    "description": "A long stretch of sandy beach backed by striking red cliffs, perfect for walking and relaxing."
+  },
+  {
+    "id": 3,
+    "name": "Praia de Benagil",
+    "country": "Portugal",
+    "location": "Algarve",
+    "type": "Cave beach",
+    "rating": 4.8,
+    "image": "images/benagil.jpg",
+    "description": "Famous for its sea cave, accessible by kayak or boat, offering a unique coastal experience."
+  },
+  {
+    "id": 4,
+    "name": "Playa de Ses Illetes",
+    "country": "Spain",
+    "location": "Formentera",
+    "type": "White sand",
+    "rating": 4.9,
+    "image": "images/illetes.jpg",
+    "description": "A Caribbean-like beach in Spain with shallow turquoise waters and soft white sand."
+  },
+  {
+    "id": 5,
+    "name": "La Concha Beach",
+    "country": "Spain",
+    "location": "San Sebastián",
+    "type": "Urban sandy",
+    "rating": 4.8,
+    "image": "images/concha.jpg",
+    "description": "A beautiful city beach with calm waters and a scenic promenade."
+  },
+  {
+    "id": 6,
+    "name": "Navagio Beach",
+    "country": "Greece",
+    "location": "Zakynthos",
+    "type": "Cove",
+    "rating": 4.9,
+    "image": "images/navagio.jpg",
+    "description": "Also known as Shipwreck Beach, famous for its dramatic cliffs and rusted shipwreck."
+  },
+  {
+    "id": 7,
+    "name": "Myrtos Beach",
+    "country": "Greece",
+    "location": "Kefalonia",
+    "type": "Pebble",
+    "rating": 4.8,
+    "image": "images/myrtos.jpg",
+    "description": "A stunning beach surrounded by high cliffs and deep blue waters."
+  },
+  {
+    "id": 8,
+    "name": "Elafonissi Beach",
+    "country": "Greece",
+    "location": "Crete",
+    "type": "Pink sand",
+    "rating": 4.9,
+    "image": "images/elafonissi.jpg",
+    "description": "Known for its unique pink-tinted sand and shallow lagoons."
+  },
+  {
+    "id": 9,
+    "name": "Cala Goloritzé",
+    "country": "Italy",
+    "location": "Sardinia",
+    "type": "Pebble",
+    "rating": 4.9,
+    "image": "images/goloritze.jpg",
+    "description": "A UNESCO-protected beach with clear water and dramatic limestone formations."
+  },
+  {
+    "id": 10,
+    "name": "Rabbit Beach",
+    "country": "Italy",
+    "location": "Lampedusa",
+    "type": "Sandy",
+    "rating": 4.9,
+    "image": "images/rabbit.jpg",
+    "description": "A pristine beach often ranked among the best in the world."
+  },
+  {
+    "id": 11,
+    "name": "Zlatni Rat",
+    "country": "Croatia",
+    "location": "Brač",
+    "type": "Pebble",
+    "rating": 4.8,
+    "image": "images/zlatni.jpg",
+    "description": "A unique horn-shaped beach that changes shape with the wind and currents."
+  },
+  {
+    "id": 12,
+    "name": "Banje Beach",
+    "country": "Croatia",
+    "location": "Dubrovnik",
+    "type": "Pebble",
+    "rating": 4.7,
+    "image": "images/banje.jpg",
+    "description": "A popular beach with views of Dubrovnik’s historic old town."
+  },
+  {
+    "id": 13,
+    "name": "Durdle Door Beach",
+    "country": "United Kingdom",
+    "location": "Dorset",
+    "type": "Arch / pebble",
+    "rating": 4.7,
+    "image": "images/durdle.jpg",
+    "description": "Famous for its natural limestone arch and scenic coastal views."
+  },
+  {
+    "id": 14,
+    "name": "Reynisfjara Beach",
+    "country": "Iceland",
+    "location": "Vik",
+    "type": "Black sand",
+    "rating": 4.8,
+    "image": "images/reynisfjara.jpg",
+    "description": "A dramatic black sand beach with basalt columns and powerful waves."
+  },
+  {
+    "id": 15,
+    "name": "Palombaggia Beach",
+    "country": "France",
+    "location": "Corsica",
+    "type": "White sand",
+    "rating": 4.8,
+    "image": "images/palombaggia.jpg",
+    "description": "A tropical-looking beach with clear waters and pine trees."
+  },
+  {
+    "id": 16,
+    "name": "Fig Tree Bay",
+    "country": "Cyprus",
+    "location": "Protaras",
+    "type": "Sandy",
+    "rating": 4.7,
+    "image": "images/figtree.jpg",
+    "description": "A family-friendly beach with calm waters and golden sand."
+  },
+  {
+    "id": 17,
+    "name": "Nissi Beach",
+    "country": "Cyprus",
+    "location": "Ayia Napa",
+    "type": "Sandy",
+    "rating": 4.7,
+    "image": "images/nissi.jpg",
+    "description": "A lively beach known for its shallow waters and vibrant atmosphere."
+  },
+  {
+    "id": 18,
+    "name": "Balos Lagoon",
+    "country": "Greece",
+    "location": "Crete",
+    "type": "Lagoon",
+    "rating": 4.9,
+    "image": "images/balos.jpg",
+    "description": "A breathtaking lagoon with turquoise water and white sand."
+  },
+  {
+    "id": 19,
+    "name": "Cala Macarella",
+    "country": "Spain",
+    "location": "Menorca",
+    "type": "Cove",
+    "rating": 4.8,
+    "image": "images/macarella.jpg",
+    "description": "A secluded cove surrounded by cliffs and pine trees."
+  },
+  {
+    "id": 20,
+    "name": "Porto Katsiki",
+    "country": "Greece",
+    "location": "Lefkada",
+    "type": "Cliff beach",
+    "rating": 4.9,
+    "image": "images/katsiki.jpg",
+    "description": "A dramatic beach accessed by stairs, famous for its vivid blue waters."
+  }
+]

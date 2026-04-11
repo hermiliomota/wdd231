@@ -43,10 +43,10 @@ nav.open {
     background-position: center;  
     background-repeat: no-repeat;
     color: black;
-    margin-bottom: 2rem;
+    margin-bottom: 0 auto 2rem auto;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 #hero .hero-content {

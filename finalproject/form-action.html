@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You</title>
+</head>
+<body>
+
+<h1 id="output"></h1>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+document.getElementById("output").textContent = `Thank you, ${name}!`;
+</script>
+
+</body>
+</html>
