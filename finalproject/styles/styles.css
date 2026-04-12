@@ -1,7 +1,7 @@
 :root {
   --primary: #0077b6;
   --secondary: #00b4d8;
-  --background: #f5f7fa;
+  --background: #0b2d3a;
   --text: #1f2937;
   --card: #ffffff;
   --shadow: rgba(0, 0, 0, 0.1);
@@ -138,7 +138,7 @@ input, select {
 }
 
 .favBtn:hover {
-  background: gold;
+  background: #ffd700;
 }
 
 /* MODAL */
