@@ -42,7 +42,7 @@ function display(beaches) {
       <img src="${b.image}" alt="${b.name}" loading="lazy">
 
       <!-- 🧠 HUMAN DESCRIPTION FIRST -->
-      <p class="description">${b.description}</p>
+      
 
       <!-- 📌 DETAILS AFTER -->
       <div class="info">
