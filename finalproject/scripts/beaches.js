@@ -40,12 +40,8 @@ function display(beaches) {
     <div class="card" data-id="${b.id}">
       
       <img src="${b.image}" alt="${b.name}" loading="lazy">
-
-      <!-- 🧠 HUMAN DESCRIPTION FIRST -->
-      
-
-      <!-- 📌 DETAILS AFTER -->
-      <div class="info">
+       
+        <div class="info">
         <h3>${b.name}</h3>
         <p>🌍 ${b.country}</p>
         <p>📍 ${b.location}</p>
