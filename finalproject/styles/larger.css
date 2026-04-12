@@ -1,0 +1,7 @@
+/* large screens */
+@media (min-width: 768px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
