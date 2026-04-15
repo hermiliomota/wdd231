@@ -2,7 +2,7 @@
   --primary: #0077b6;
   --secondary: #d8d400;
   --background: #06666d;
-  --text: #579594;
+  --text: #f0f5f5;
   --card: #e5e0e8;
   --shadow: rgba(0, 0, 0, 0.1);
 }
@@ -176,7 +176,7 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-  background: #0b2d3a;
+  background: #010405;
   color: #ffffff;
 }
 
